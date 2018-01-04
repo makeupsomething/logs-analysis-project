@@ -19,21 +19,22 @@ It is written in legacy Python (Python 2.7).
 
 ### Setup
 1. Install Vagrant And VirtualBox
+2. Download the supporting files
 2. Download and setup the database
 3. Clone this repository
 
 ### To Run
 
-Launch Vagrant VM by running `vagrant up`, you can the log in with `vagrant ssh`
+The supporting files for this project can be found [here](https://github.com/udacity/fullstack-nanodegree-vm), inside you will find a `vagrant` folder. In the terminal `cd` to there and run the command `vagrant up` this may take a while as needs to download the preconfigured virtual machine. After that command finished run `vagrant ssh` to log into the machine. Note, you are also free to use your own virtual machine but you will need to configure it yourself.
 
 Download the data and place it in a folder that can be accessed by vagrant. The data can be downloaded from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
 
-To load the data, use the command 
+To load the data, use the command (inside the virtual machine):
 ```
 psql -d news -f newsdata.sql
 ```
 
-To run the script use the following command:
+To run the script use the following command (inside the virtual machine):
 ```
 python script.py
 ```
